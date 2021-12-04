@@ -1,0 +1,67 @@
+<div class="quiz" id="quiz">
+  <div class="quiz__block">
+    <div class="quiz__back">
+      <a href="#start">
+        <i class='bx bxs-home-circle' ></i>
+      </a>
+      <span class="timer"></span>
+      <a href="#category">
+        <i class='bx bx-arrow-back'></i>
+      </a>
+    </div>
+    <div class="quiz__data">
+      <div class="quiz__question-block">
+        <h3 id="question">Кто нарисовал эту картину?</h3>
+        <div class="quiz__img">
+          <div class="quiz__img-img"></div>
+          <div class="quiz__pagination">
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+              <div class="quiz__dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__label-grid">
+        <label id="a1" class="btn__container">
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label id="a2" class="btn__container">
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label id="a3" class="btn__container">
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label id="a4" class="btn__container">
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label id="incorrect__label" class="disp__none btn__container">
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="quiz__modal" id="quiz-modal">
+    <div class="quiz__block">
+      <span class="quiz__modal-type">Правильно! Это:</span>
+      <img class="quiz__modal-img" id="quiz-modal-img" src="https://github.com/TrofimGest/image-data/blob/master/img/13.jpg?raw=true">
+      <div class="quiz__modal-text" id="quiz-modal-text">
+        <p class="quiz__modal-author"></p>
+        <span class="quiz__modal-name"></span>
+        <span class="quiz__modal-year"></span>
+        <button class="quiz__skip-btn" id="quiz-skip-btn">Далее</button>
+      </div>
+    </div>
+  </div>
+</div>
