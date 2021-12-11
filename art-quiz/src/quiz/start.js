@@ -11,7 +11,6 @@ class Start {
   }
 
   async afterRender() {
-    // const categoryElement = document.getElementById('category');
     const startButtons = document.querySelectorAll('.start__btn');
 
     for (let i = 0; i < startButtons.length; i += 1) {
