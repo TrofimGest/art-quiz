@@ -328,6 +328,10 @@ label input{
   align-items: center;
 }
 
+.settings__heading{
+  margin-bottom: 20vh;
+}
+
 .settings__back{
   display: flex;
   justify-content: flex-end;
