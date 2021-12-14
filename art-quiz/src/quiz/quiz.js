@@ -70,7 +70,7 @@ class Quiz {
 
   nextQuestion(answer, pagination, modal, modalType) {
     if (answer.firstChild.checked || answer.id === 'incorrect__label') {
-      this.questions[this.answeredAmount].answer(answer);
+      this.questions[this.answeredAmount].checkAnswer(answer);
       this.showResult(pagination, modalType);
       this.toggleMenu(modal);
       this.questions[this.answeredAmount].fillModal();

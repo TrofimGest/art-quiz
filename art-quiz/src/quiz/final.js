@@ -1,6 +1,6 @@
 class Final {
   constructor() {
-    this.final = { };
+    this.final = {};
   }
 
   async render() {

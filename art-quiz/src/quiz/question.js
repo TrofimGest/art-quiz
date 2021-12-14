@@ -31,7 +31,7 @@ class Question {
     return z;
   }
 
-  answer(checkedElement) {
+  checkAnswer(checkedElement) {
     this.isCorrect = (checkedElement.childNodes[1].textContent === this.correctAnswer);
   }
 

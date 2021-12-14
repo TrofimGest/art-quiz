@@ -1,6 +1,6 @@
 class Start {
   constructor() {
-    this.start = { };
+    this.start = {};
   }
 
   async render() {
