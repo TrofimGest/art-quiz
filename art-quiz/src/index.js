@@ -31,5 +31,9 @@ const router = async () => {
 
 // Listen on hash change:
 window.addEventListener('hashchange', router);
-
 window.addEventListener('load', router);
+
+// Audio
+document.addEventListener('load', () => {
+  document.querySelector('.audio1').play();
+});
