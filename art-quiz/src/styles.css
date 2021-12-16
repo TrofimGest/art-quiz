@@ -260,13 +260,14 @@ row-gap: 10vh;
 }
 
 .quiz__modal{
-  display: none;
+  display: flex;
+  right: -100%;
+  bottom: 0;
   position: absolute;
   width: 100%;
   height: calc(100vh - 50px);
-  transition: 0.3s;
+  transition: 0.5s;
   z-index: 20;
-  background-color: transparent;
 }
 
 .quiz__modal-block{
@@ -297,7 +298,7 @@ row-gap: 10vh;
 }
 
 .show-menu {
-  display: flex;
+  right: 0;
 }
 
 .bx-arrow-back, 
