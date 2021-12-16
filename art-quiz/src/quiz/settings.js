@@ -18,15 +18,20 @@ class Settings {
     const musicBtn = document.querySelector('.settings__btn-container');
     const BtnText = document.querySelector('.settings__type');
     const volumeBar = document.querySelector('.volume');
-    const volumeContainer1 = document.getElementById('volume-progress-container1');
-    const volumeProgress1 = document.getElementById('volume-progress1');
+    const widthCount = document.querySelector('.volume__mousemove-container');
+    const container = document.getElementById('volume-progress-container1');
+    const progress = document.getElementById('volume-progress1');
     const volumeIcon = document.getElementById('v1');
 
     this.quiz = { };
     musicBtn.addEventListener('click', () => (this.isPlaying ? this.pauseMusic(music, musicBtn, volumeBar, BtnText, volumeText)
       : this.playMusic(music, musicBtn, volumeBar, BtnText, volumeText)));
-    volumeContainer1.addEventListener('mousemove', () => this.changeVolume(event, music, volumeProgress1, volumeContainer1, volumeIcon));
-    volumeIcon.addEventListener('click', () => this.mute(music, volumeProgress1, volumeIcon));
+
+    widthCount.addEventListener(
+      'mousemove',
+      () => this.changeVolume(event, music, progress, container, volumeIcon),
+    );
+    volumeIcon.addEventListener('click', () => this.mute(music, progress, volumeIcon));
   }
 
   playMusic(music, musicBtn, volumeBar, BtnText, volumeText) {
@@ -53,10 +58,10 @@ class Settings {
     const progressBar = volumeProgress1;
     const mus = music;
     let volume = event.offsetX / volumeContainer1.offsetWidth;
-    if (volume < 0.1) {
+    if (volume < 0.05) {
       volume = 0;
     }
-    if (volume > 0.9) {
+    if (volume > 0.95) {
       volume = 1;
     }
     progressBar.style.width = `${volume * 100}%`;

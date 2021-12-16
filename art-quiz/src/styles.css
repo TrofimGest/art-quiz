@@ -377,7 +377,7 @@ label input{
 .volume{
   width: 36%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   opacity: 0;
 }
@@ -386,12 +386,21 @@ label input{
   opacity: 0;
 }
 
+.volume__mousemove-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  width: 100%;
+  height: 15px;
+}
+
 .volume__progress-container {
   background: var(--gray-color);
   border-radius: 5px;
-  cursor: pointer;
   height: 8px;
-  width: 80%;
+  width: 100%;
 }
 .volume__progress {
   background: var(--main-color);
@@ -402,6 +411,7 @@ label input{
 }
 .volume__icon{
   font-size: 1.25rem;
+  margin-left: 10px;
 }
 @media screen and (min-width: 420px){
     .quiz__block{
@@ -490,6 +500,10 @@ label input{
     .category__block{
       width: 34vw;
       height: 12vw;
+    }
+
+    .volume__mousemove-container{
+      height: 30px;
     }
   }
   @media screen and (min-width: 1920px){
