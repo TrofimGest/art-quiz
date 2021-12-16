@@ -1,7 +1,8 @@
 class Settings {
   constructor() {
     this.settings = {};
-    this.lastVolume = 1;
+    this.lastVolume = 0.5;
+    this.isPlaying = false;
   }
 
   async render() {
@@ -13,13 +14,39 @@ class Settings {
 
   async afterRender() {
     const music = document.querySelector('.audio1');
+    const volumeText = document.getElementById('volume-text');
+    const musicBtn = document.querySelector('.settings__btn-container');
+    const BtnText = document.querySelector('.settings__type');
+    const volumeBar = document.querySelector('.volume');
     const volumeContainer1 = document.getElementById('volume-progress-container1');
     const volumeProgress1 = document.getElementById('volume-progress1');
     const volumeIcon = document.getElementById('v1');
 
     this.quiz = { };
-    volumeContainer1.addEventListener('click', () => this.changeVolume(event, music, volumeProgress1, volumeContainer1, volumeIcon));
+    musicBtn.addEventListener('click', () => (this.isPlaying ? this.pauseMusic(music, musicBtn, volumeBar, BtnText, volumeText)
+      : this.playMusic(music, musicBtn, volumeBar, BtnText, volumeText)));
+    volumeContainer1.addEventListener('mousemove', () => this.changeVolume(event, music, volumeProgress1, volumeContainer1, volumeIcon));
     volumeIcon.addEventListener('click', () => this.mute(music, volumeProgress1, volumeIcon));
+  }
+
+  playMusic(music, musicBtn, volumeBar, BtnText, volumeText) {
+    this.isPlaying = true;
+    musicBtn.style.background = 'var(--main-color)';
+    BtnText.innerText = 'Выключить музыку';
+    BtnText.style.color = 'var(--white-color)';
+    music.play();
+    volumeBar.style.opacity = '1';
+    volumeText.style.opacity = '1';
+  }
+
+  pauseMusic(music, musicBtn, volumeBar, BtnText, volumeText) {
+    this.isPlaying = false;
+    musicBtn.style.background = 'var(--white-color)';
+    BtnText.innerText = 'Включить музыку';
+    BtnText.style.color = 'var(--black-color)';
+    volumeBar.style.opacity = '0';
+    volumeText.style.opacity = '0';
+    music.pause();
   }
 
   changeVolume(event, music, volumeProgress1, volumeContainer1) {

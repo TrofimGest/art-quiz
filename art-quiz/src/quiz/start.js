@@ -12,7 +12,6 @@ class Start {
 
   async afterRender() {
     const startButtons = document.querySelectorAll('.start__btn');
-
     for (let i = 0; i < startButtons.length; i += 1) {
       startButtons[i].addEventListener('click', () => { localStorage.setItem('game', i); });
     }

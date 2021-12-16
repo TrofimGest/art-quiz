@@ -342,10 +342,24 @@ label input{
   width: 100%;
 }
 
-.settings__time{
-  height: 3vw;
-  width: 50%;
-  border-radius: 10px;
+.settings__btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36%;
+  border: 1px solid var(--black-color);
+  border-radius: 20px;
+  row-gap: 5vh;
+  height: 6vh;
+}
+
+.settings__btn-container:hover{
+  width: 45%;
+}
+
+.settings__type{
+  color: var(--black-color);
+  font-weight: 600;
 }
 
 .white{
@@ -365,7 +379,13 @@ label input{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0;
 }
+
+#volume-text{
+  opacity: 0;
+}
+
 .volume__progress-container {
   background: var(--gray-color);
   border-radius: 5px;
@@ -377,7 +397,7 @@ label input{
   background: var(--main-color);
   border-radius: 5px;
   height: 100%;
-  width: 100%;
+  width: 50%;
   transition: width 0.1s linear;
 }
 .volume__icon{
