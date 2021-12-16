@@ -81,10 +81,10 @@ class Quiz {
   showResult(pagination, modalType) {
     if (this.questions[this.answeredAmount].isCorrect) {
       pagination[this.answeredAmount].classList.add('quiz__correct');
-      modalType.innerText = "Correct answer! It's:";
+      modalType.innerText = 'Правильно :)';
     } else {
       pagination[this.answeredAmount].classList.add('quiz__incorrect');
-      modalType.innerText = "Wrong answer! It's:";
+      modalType.innerText = 'Не правильно! Это:';
     }
   }
 
