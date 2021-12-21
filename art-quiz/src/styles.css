@@ -50,6 +50,8 @@ a{
 .main {
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   width: 100vw;
   height: calc(100vh - 50px);
 }
