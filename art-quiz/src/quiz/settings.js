@@ -36,9 +36,9 @@ class Settings {
 
   playMusic(music, musicBtn, volumeBar, BtnText, volumeText) {
     this.isPlaying = true;
-    musicBtn.style.background = 'var(--main-color)';
+    musicBtn.style.background = 'var(--white-color)';
     BtnText.innerText = 'Выключить музыку';
-    BtnText.style.color = 'var(--white-color)';
+    BtnText.style.color = 'var(--black-color)';
     music.play();
     volumeBar.style.opacity = '1';
     volumeText.style.opacity = '1';
@@ -46,9 +46,9 @@ class Settings {
 
   pauseMusic(music, musicBtn, volumeBar, BtnText, volumeText) {
     this.isPlaying = false;
-    musicBtn.style.background = 'var(--white-color)';
+    musicBtn.style.background = 'var(--main-color)';
     BtnText.innerText = 'Включить музыку';
-    BtnText.style.color = 'var(--black-color)';
+    BtnText.style.color = 'var(--white-color)';
     volumeBar.style.opacity = '0';
     volumeText.style.opacity = '0';
     music.pause();
