@@ -335,10 +335,6 @@ label input{
   align-items: center;
 }
 
-.settings__heading{
-  margin-bottom: 20vh;
-}
-
 .settings__back{
   display: flex;
   justify-content: flex-end;
@@ -461,6 +457,16 @@ label input{
     font-size: 1.5rem;
   }
 
+  .start__btn-container,
+  .settings__btn-container{ 
+    width: 35vw;
+  }
+
+  .start__btn-container:hover,
+  .settings__btn-container:hover{
+    width: 30vw;
+  }
+
   .quiz__block{
     width: 80vw;
   }
@@ -492,6 +498,11 @@ label input{
   margin: 0 3rem;
   }
   @media screen and (min-width: 1366px){
+    .white__container{
+      border-radius: 50px;
+      width: 60vw;
+      height: 52vh;
+    }
     .quiz__img{
       width: 25vw;
       height: 25vw;
